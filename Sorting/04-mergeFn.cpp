@@ -54,4 +54,14 @@ void print(int arr[], int size)
 }
 int main()
 {
+ // int a[] = {10, 15, 20, 11, 30};
+ int a[] = {5, 8, 12, 14, 7};
+ int low = 0, mid = 3, high = 4;
+
+ mergeFunction(a, low, mid, high);
+ print(a, 5);
+
+ // time complexity is theta(n);
+ // aux space theta(n)
+ // n is the no elements from low to high
 }
