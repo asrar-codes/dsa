@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-// given an array, a low Index, mid index and high index, it is given that elements from low to mid are sorted and elements from mid + 1 to high are sorted.. We need to sort the array from low to high..
+
 void mergeFunction(int a[], int low, int mid, int high)
 {
  // make two arrays and insert elements from low to mid to left array and insert elements from mid+1 to high to right array
@@ -54,16 +54,26 @@ void print(int arr[], int size)
   cout << arr[i] << " ";
  }
 }
+
+// merge sort algorithm
+
+void mergeSort(int arr[], int l, int r)
+{
+ if (r > l)
+ {
+  int m = l + (r - l) / 2;
+  mergeSort(arr, l, m);
+  mergeSort(arr, m + 1, r);
+  mergeFunction(arr, l, m, r);
+ }
+}
+
 int main()
 {
- // int a[] = {10, 15, 20, 11, 30};
- int a[] = {5, 8, 12, 14, 7};
- int low = 0, mid = 3, high = 4;
-
- mergeFunction(a, low, mid, high);
- print(a, 5);
-
- // time complexity is theta(n);
- // aux space theta(n)
- // n is the no elements from low to high
+ int a[] = {10, 9, 8, 7, 6, 44, 11, -1, 0};
+ int size = sizeof(a) / sizeof(a[0]);
+ int l = 0;
+ int r = size - 1;
+ mergeSort(a, l, r);
+ print(a, size);
 }

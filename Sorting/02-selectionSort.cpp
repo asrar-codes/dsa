@@ -59,9 +59,10 @@ int main()
 {
  // int arr[10] = {1, 9, 10, 4, 8, 3, 7, 2, 6, 5};
  // print(arr, 10);
- int arr[5] = {10, 20, 30, 40, 50};
- // int arr[] = {1, 2, 3, 4, 5, 6, 8, 7, 9, 10};
- // int arr[] = {5, 2, 7, 2, 1, 5, 9};
+ // int arr[5] = {10, 20, 30, 40, 50};
+ // int arr[] = {1, 2, 3, 4, 5, 6, 8, 7, 11, 10};
+ int arr[] = {5, 2, 7, 2, 1, 5, 9};
+ // int arr[] = {10, 5, 8, 20, 2, 18};
  int size = sizeof(arr) / sizeof(arr[0]);
  // selectionSort(arr, size);
  // print(arr, size);

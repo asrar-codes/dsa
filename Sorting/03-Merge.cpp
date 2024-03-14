@@ -46,11 +46,13 @@ void print(int arr[], int size)
 }
 int main()
 {
- int a[] = {5, 8, 9}, b[] = {
-                          4, 9, 11, 12, 19, 22, 30};
+ int a[] = {5, 8, 9}, b[] = {4, 9, 11, 12, 19, 22, 30};
  int m = sizeof(a) / sizeof(a[0]);
  int n = sizeof(b) / sizeof(b[0]);
  int ans[m + n];
  merge(a, b, m, n, ans);
  print(ans, m + n);
 }
+
+// time complexity O(m+n)
+// space complexity O(m+n)
