@@ -25,5 +25,5 @@ int main()
 {
  int arr[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
  int start = 0, size = 10, end = size - 1;
- cout << binarySearch(arr, start, end, 11, size) << endl;
+ cout << binarySearch(arr, start, end, 2, size) << endl;
 }

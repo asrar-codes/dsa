@@ -5,6 +5,7 @@ struct Node
 {
  int data;
  Node *next;
+
  Node(int x)
  {
   data = x;
@@ -12,32 +13,26 @@ struct Node
  }
 };
 
-Node *insertAtPos(Node *head, int x, int pos)
+Node *reverse(Node *head)
 {
- Node *temp = new Node(x);
- if (pos == 1)
- {
-  temp->next = head;
-  return temp;
- }
  Node *curr = head;
- for (int i = 1; i < pos - 2 && curr != NULL; i++)
-  curr = curr->next;
- if (curr == NULL)
-  return head;
- temp->next = curr->next;
- curr->next = temp;
- return head;
+ Node *prev = NULL;
+ while (curr != NULL)
+ {
+  Node *next = curr->next;
+  curr->next = prev;
+  prev = curr;
+  curr = next;
+ }
+ return prev;
 }
 
-Node *recRevL(Node *head)
-{
- if (head == NULL || head->next == NULL)
- {
- }
-}
 int main()
 {
+
+ struct Node *head = new Node(10);
+ head->next = new Node(20);
+ head->next->next = new Node(30);
 
  return 0;
 }
